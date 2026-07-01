@@ -1,0 +1,199 @@
+<!-- ============================================
+     MOBILE MENU — DS3 Comunicaciones
+     Mismo contrato de IDs que usa nav.js:
+     #mobile-menu, #close-menu, #menu-overlay
+============================================ -->
+
+<div
+  id="menu-overlay"
+  class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-40 hidden"
+></div>
+
+<div
+  id="mobile-menu"
+  class="fixed top-0 left-0 h-full w-[85%] max-w-sm bg-white shadow-2xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto flex flex-col"
+>
+  <!-- Header -->
+  <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100 flex-shrink-0">
+    <img
+      src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg"
+      alt="DS3 Comunicaciones"
+      class="h-8 w-auto"
+    />
+
+    <button
+      id="close-menu"
+      class="w-9 h-9 flex items-center justify-center rounded-full text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+      aria-label="Cerrar menú"
+    >
+      <i class="fas fa-times text-base"></i>
+    </button>
+  </div>
+
+  <!-- Contenido scrolleable -->
+  <div class="flex-1 px-5 py-6 space-y-8">
+
+    <!-- PRODUCTOS -->
+    <div>
+      <p class="text-xs font-medium uppercase tracking-[0.15em] text-gray-400 mb-3 px-1">
+        Productos
+      </p>
+
+      <div class="space-y-1">
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-list text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Lista Completa</span>
+        </a>
+
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_access_point_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-wifi text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Access Point</span>
+        </a>
+
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_small_bussines_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-network-wired text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Switch Small Business</span>
+        </a>
+
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_catalyst_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-server text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Switch Catalyst</span>
+        </a>
+
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_meraki_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-cloud text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Cisco Meraki</span>
+        </a>
+
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_nexus_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-sitemap text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Cisco Nexus</span>
+        </a>
+
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_router_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-route text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Routers</span>
+        </a>
+
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_telefonos_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-phone text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Teléfonos Cisco</span>
+        </a>
+
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_modulo_transceiver_fibra_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-microchip text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Módulos / Transceiver</span>
+        </a>
+
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_accesorios_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-plug text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Accesorios</span>
+        </a>
+
+        <a href="http://ds3comunicaciones.com/cisco/precios_cisco_switch_industrial_b.html"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-200 group">
+          <span class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors duration-200">
+            <i class="fas fa-industry text-blue-600 text-xs"></i>
+          </span>
+          <span class="text-[15px] text-gray-800 group-hover:text-blue-600 transition-colors duration-200">Switch Industrial</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- LISTAS DE PRECIOS -->
+    <div>
+      <p class="text-xs font-medium uppercase tracking-[0.15em] text-gray-400 mb-3 px-1">
+        Listas de Precios
+      </p>
+
+      <div class="flex flex-wrap gap-2 px-1">
+        <a href="https://www.ds3comunicaciones.com/AMP/precios_amp.html"
+          class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+          AMP
+        </a>
+        <a href="https://www.ds3comunicaciones.com/amphenol/precios_amphenol.html"
+          class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+          Amphenol
+        </a>
+        <a href="https://www.ds3comunicaciones.com/andrew/precios_andrew.html"
+          class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+          Andrew
+        </a>
+        <a href="https://www.ds3comunicaciones.com/apc/precios_apc.html"
+          class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+          APC
+        </a>
+        <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco.html"
+          class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+          Cisco
+        </a>
+        <a href="https://www.ds3comunicaciones.com/mikrotik/precios_mikrotik.html"
+          class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+          Mikrotik
+        </a>
+        <a href="https://www.ds3comunicaciones.com/panduit/precios_panduit.html"
+          class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+          Panduit
+        </a>
+        <a href="https://www.ds3comunicaciones.com/ubiquiti/precios_ubiquiti.html"
+          class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+          Ubiquiti
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer fijo: contacto + CTA -->
+  <div class="flex-shrink-0 border-t border-gray-100 px-5 py-5 bg-gray-50/50 space-y-3">
+    <div class="flex items-center gap-4 px-1">
+      <a href="tel:994428965" class="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200">
+        <i class="fas fa-phone-alt text-xs"></i>
+        994 428 965
+      </a>
+      <a href="mailto:netperu100@hotmail.com" class="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200">
+        <i class="fas fa-envelope text-xs"></i>
+        Correo
+      </a>
+    </div>
+
+    
+      href="https://wa.me/51996533223?text=Hola%20necesito%20ayuda"
+      target="_blank"
+      class="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 shadow-sm transition-all duration-200"
+    >
+      <i class="fab fa-whatsapp text-base"></i>
+      Contactar por WhatsApp
+    </a>
+  </div>
+</div>

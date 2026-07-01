@@ -1,0 +1,48 @@
+<!-- ============================================
+     MOBILE HEADER — DS3 Comunicaciones
+     Mismos IDs que usa nav.js: #mobile-menu-button,
+     #mobile-search-button. Solo ajuste de borde
+     para coherencia con el resto del sistema.
+============================================ -->
+
+<div class="max-w-7xl mx-auto px-6">
+  <div class="lg:hidden">
+
+    <div class="flex items-center justify-between py-3">
+
+      <!-- Izquierda -->
+      <div class="flex items-center gap-3">
+
+        <!-- Menú -->
+        <button
+          id="mobile-menu-button"
+          class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors duration-200"
+          aria-label="Abrir menú"
+        >
+          <i class="fas fa-bars text-lg text-gray-700"></i>
+        </button>
+
+        <!-- Logo -->
+        <a href="/">
+          <img
+            src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg"
+            alt="DS3 Comunicaciones"
+            class="h-11 w-auto"
+          />
+        </a>
+
+      </div>
+
+      <!-- Buscar -->
+      <button
+        id="mobile-search-button"
+        class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 hover:border-blue-500 hover:bg-gray-50 transition-colors duration-200"
+        aria-label="Buscar"
+      >
+        <i class="fas fa-search text-sm text-gray-600"></i>
+      </button>
+
+    </div>
+
+  </div>
+</div>

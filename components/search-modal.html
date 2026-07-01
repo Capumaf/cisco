@@ -1,0 +1,128 @@
+<!-- ============================================
+     SEARCH MODAL — DS3 Comunicaciones
+     Mantiene el mismo contrato de IDs/clases que
+     usa nav.js para abrir/cerrar (search-modal,
+     close-search). No se modifica esa lógica.
+============================================ -->
+<section
+  id="search-modal"
+  class="fixed inset-0 h-screen w-full z-50 anim none"
+>
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"></div>
+
+  <!-- Contenedor del modal -->
+  <div class="relative h-full w-full px-4 sm:px-6 pt-20 sm:pt-28 flex justify-center">
+    <div
+      class="w-full max-w-2xl bg-white rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden animate-[fadeInUp_0.25s_ease-out]"
+    >
+      <!-- Barra de búsqueda -->
+      <form
+        name="form1"
+        method="get"
+        action="https://www.ds3comunicaciones.com/find.html"
+        enctype="application/x-www-form-urlencoded"
+        class="flex items-center gap-3 px-5 py-4 border-b border-gray-100"
+      >
+        <i class="fa-solid fa-magnifying-glass text-gray-400 text-lg"></i>
+
+        <input
+          id="search-input"
+          name="q"
+          type="text"
+          autocomplete="off"
+          class="flex-1 outline-none text-base sm:text-lg placeholder:text-gray-400 text-gray-900"
+          placeholder="Buscar productos, marcas, referencias..."
+          required
+        />
+
+        <input type="hidden" name="cx" value="partner-pub-9265252540298851:f2549i3fi60" />
+        <input type="hidden" name="cof" value="FORID:10" />
+        <input type="hidden" name="ie" value="ISO-8859-1" />
+
+        <button
+          type="submit"
+          class="hidden sm:flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors duration-200 flex-shrink-0"
+        >
+          Buscar
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+
+        <button
+          type="button"
+          id="close-search"
+          class="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-full text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+          aria-label="Cerrar búsqueda"
+        >
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </form>
+
+      <!-- Accesos rápidos -->
+      <div class="px-5 py-4">
+        <p class="text-xs font-medium uppercase tracking-wider text-gray-400 mb-3">
+          Marcas populares
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          <a href="https://www.ds3comunicaciones.com/cisco/index.html" class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+            Cisco
+          </a>
+          <a href="https://www.ds3comunicaciones.com/ubiquiti/index.html" class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+            Ubiquiti
+          </a>
+          <a href="https://www.ds3comunicaciones.com/mikrotik/index.html" class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+            MikroTik
+          </a>
+          <a href="https://www.ds3comunicaciones.com/panduit/index.html" class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+            Panduit
+          </a>
+          <a href="https://www.ds3comunicaciones.com/AMP/index.html" class="px-3.5 py-1.5 rounded-full bg-gray-100 hover:bg-blue-50 hover:text-blue-600 text-sm text-gray-700 transition-colors duration-200">
+            AMP
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer con hint de teclado -->
+      <div class="flex items-center justify-between px-5 py-3 bg-gray-50 border-t border-gray-100">
+        <span class="text-xs text-gray-400">
+          Resultados provistos por Google
+        </span>
+        <span class="hidden sm:flex items-center gap-1 text-xs text-gray-400">
+          <kbd class="px-1.5 py-0.5 rounded border border-gray-300 bg-white font-sans text-[10px]">ESC</kbd>
+          para cerrar
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Progressive enhancement: no reemplaza la lógica de apertura/cierre
+     de nav.js (que ya maneja #search-button, #close-search, etc.).
+     Solo añade: autofocus al abrir y cierre con tecla ESC. -->
+<script>
+  (function () {
+    var modal = document.getElementById("search-modal");
+    var input = document.getElementById("search-input");
+
+    if (!modal || !input) return;
+
+    var observer = new MutationObserver(function () {
+      var isOpen = !modal.classList.contains("none");
+      if (isOpen) {
+        setTimeout(function () {
+          input.focus();
+        }, 50);
+      }
+    });
+
+    observer.observe(modal, { attributes: true, attributeFilter: ["class"] });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modal.classList.contains("none")) {
+        var closeBtn = document.getElementById("close-search");
+        if (closeBtn) closeBtn.click();
+      }
+    });
+  })();
+</script>
